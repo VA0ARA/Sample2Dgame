@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     private SpriteRenderer sr;
     private Animator anim;
     private string WAlkANImation = "Walk1";// condition we set in animation 
+    private bool IsGrounded; // for limit the jump 
+    private string Tagname = "Ground";
     private void Awake()
     {
         // just intialaze compotion 
@@ -28,12 +30,23 @@ public class Player : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    // for getting  input 
     void Update()
     {
         PlyerMOveKeyboard();
         AnimatPlyer();
+        
 
+
+
+
+
+    }
+    // good for physics caculation
+    private void FixedUpdate()
+    {
+        Jump();
+        
 
     }
     private void PlyerMOveKeyboard()
@@ -63,4 +76,26 @@ public class Player : MonoBehaviour
         }
 
     }
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && IsGrounded)
+        {
+            IsGrounded = false;
+           // Debug.Log("press");// return true press and releas
+            mybody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            
+
+        }
+        
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag(Tagname))
+        {
+            Debug.Log("zground");
+            IsGrounded = true;
+        }
+    }
+
 }
