@@ -46,8 +46,6 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Jump();
-        
-
     }
     private void PlyerMOveKeyboard()
     {
@@ -93,7 +91,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Tagname))
         {
-            Debug.Log("zground");
+            Debug.Log("ground");
             IsGrounded = true;
         }
     }
