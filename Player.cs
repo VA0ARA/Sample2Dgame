@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private string WAlkANImation = "Walk1";// condition we set in animation 
     private bool IsGrounded; // for limit the jump 
     private string Tagname = "Ground";
+    private string TagEnemy = "Enemy";
     private void Awake()
     {
         // just intialaze compotion 
@@ -91,8 +92,19 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(Tagname))
         {
-            Debug.Log("ground");
+            //Debug.Log("ground");
             IsGrounded = true;
+        }
+        if (collision.gameObject.CompareTag(TagEnemy))
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag(TagEnemy))
+        {
+            Destroy(gameObject);
         }
     }
 

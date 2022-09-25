@@ -18,6 +18,10 @@ public class CameraFollow : MonoBehaviour
     // it call after updat tiny good for follow thing or chasing behavior.....
     void LateUpdate()
     {
+        //when we use retun in void method
+        //after condition is ok function dont excute other line
+       if( !player)
+            return;       
         tempos = transform.position;
         tempos.x = player.position.x;
         if (tempos.x < Minx)
