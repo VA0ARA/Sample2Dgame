@@ -1,0 +1,35 @@
+[33mcommit 3c98e5ab65cae4b78197806af72eb700b32b065c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Sat Sep 24 19:14:47 2022 +0330
+
+    create Enemy walk function
+
+[33mcommit 0e8c59a7fe24a736453a327afa05a29668463a74[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Wed Sep 21 12:49:52 2022 +0430
+
+    add camera follow and limit that
+
+[33mcommit bda8268853d17349b2ec1bd1fb021b1bf87cd677[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Wed Sep 21 11:11:40 2022 +0430
+
+    writedwon the jump
+
+[33mcommit 74ce08ba635112446343e1b6409015f59170f06d[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Tue Sep 20 20:52:11 2022 +0430
+
+    add animation function
+
+[33mcommit 2418f502be3926eedbc236308656127d49ed283a[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Tue Sep 20 20:09:15 2022 +0430
+
+    add Input in function
+
+[33mcommit c1ba023ac78585176183e669bc2d7c2374039fa7[m
+Author: vahid ara <vahidaara@gmail.com>
+Date:   Tue Sep 20 19:41:33 2022 +0430
+
+    Player
