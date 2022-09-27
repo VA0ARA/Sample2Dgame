@@ -19,12 +19,11 @@ public class GGameManager : MonoBehaviour
     private void Awake()
     {
 
-        // cosept of single toon is here means we destroy excess of them from our other scenes
+        // consept of singltuon pattern is here means create just one pattern
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-
         }
            
         else
@@ -33,6 +32,9 @@ public class GGameManager : MonoBehaviour
             //destroy doublecated
         }
     }
+
+    // passing a index that we select them in mainmenu then in the gamesample scence player
+    // that we selected resnatet to index we choose in menuScence
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnlevelFinishedLoading;
@@ -41,9 +43,9 @@ public class GGameManager : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnlevelFinishedLoading;
     }
-    void OnlevelFinishedLoading(Scene scene,LoadSceneMode mode)
+    void OnlevelFinishedLoading(Scene scene, LoadSceneMode mode)
     {
-        if(scene.name== "SampleScene")
+        if (scene.name == "SampleScene")
         {
             Instantiate(Character[charindex]);
         }
